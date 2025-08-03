@@ -1,206 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emmanuel Koros | Portfolio</title>
-  <style>
-    :root {
-      --bg: #f4f4f4;
-      --text: #333;
-      --card: white;
-      --nav: #444;
-      --accent: #1e3c72;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Koros - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    header {
-      background: linear-gradient(to right, var(--accent), #2a5298);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      position: relative;
-    }
+        /* Header & Navigation */
+        .header {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    nav {
-      background-color: var(--nav);
-      text-align: center;
-      padding: 10px;
-    }
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #007bff;
+            margin: 0;
+            font-size: 2.5em;
+        }
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .header p {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 10px;
+        }
 
-    section {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-      background: var(--card);
-      border-radius: 10px;
-    }
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
 
-    .avatar {
-      width: 160px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
+        .cta-button:hover {
+            background-color: #218838;
+        }
 
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+        /* Section Styling */
+        section {
+            background-color: #fff;
+            padding: 60px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    .skill-card {
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      padding: 15px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #007bff;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
 
-    .skill-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+        /* About Me Section */
+        #about p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    footer {
-      background-color: var(--nav);
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-    }
+        /* Skills/What I Do Section */
+        .skills-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
 
-    @media (max-width: 768px) {
-      .skills-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+        .skill-item {
+            flex-basis: 30%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
 
-    /* Dark Mode Toggle Switch */
-    .toggle-container {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-    .toggle-container input[type="checkbox"] {
-      display: none;
-    }
+        .project-card {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
 
-    .toggle-container label {
-      width: 50px;
-      height: 25px;
-      background-color: #ccc;
-      display: inline-block;
-      border-radius: 25px;
-      position: relative;
-      cursor: pointer;
-    }
+        .project-card h3 {
+            color: #333;
+            margin-top: 0;
+        }
 
-    .toggle-container label::after {
-      content: "";
-      width: 21px;
-      height: 21px;
-      background-color: white;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
+        .project-card .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+        }
 
-    #darkToggle:checked + label {
-      background-color: #4caf50;
-    }
+        .project-card .project-links a:hover {
+            text-decoration: underline;
+        }
 
-    #darkToggle:checked + label::after {
-      transform: translateX(25px);
-    }
-  </style>
+        /* Contact Section */
+        #contact .contact-info {
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        #contact .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Header / Hero Section -->
-  <header>
-    <h1>Hi, I'm Emmanuel Koros</h1>
-    <p>Web Developer | Programmer | Data Entry Specialist</p>
+    <header class="header">
+        <div class="container">
+            <h1>Emmanuel Koros</h1>
+            <p>Web Developer, Programmer, and Data Entry Specialist</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </header>
 
-    <!-- Dark Mode Toggle -->
-    <div class="toggle-container">
-      <input type="checkbox" id="darkToggle">
-      <label for="darkToggle"></label>
+    <div class="container">
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                As a student with a passion for coding, data entry, and web development, I thrive on
+                solving problems and building useful things. I am constantly working on new projects
+                to improve my skills and stay up-to-date with the latest technologies. My goal is to
+                create clean, efficient, and user-friendly solutions.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>What I Do</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h3>Web Development</h3>
+                    <p>I design and build responsive, modern websites using HTML, CSS, and JavaScript, focusing on great user experience.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Programming</h3>
+                    <p>I write code for various tools, applications, and automations to streamline tasks and solve complex problems efficiently.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Data Entry</h3>
+                    <p>I provide fast and accurate data entry services using tools like Google Sheets and Microsoft Excel, ensuring data integrity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Hackathon Submission Project</h3>
+                    <p>A brief description of your hackathon project, what it does, and the technologies used (e.g., Python, Flask, etc.).</p>
+                    <div class="project-links">
+                        <a href="#">View Live</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title Two</h3>
+                    <p>Description of another project you've worked on. Talk about the features, your role, and the outcomes.</p>
+                    <div class="project-links">
+                        <a href="#">View Live</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title Three</h3>
+                    <p>Details about a third project. Mention any specific challenges you overcame or unique aspects of the build.</p>
+                    <div class="project-links">
+                        <a href="#">View Live</a>
+                        <a href="#">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Feel free to get in touch with me to discuss a project or just say hello!</p>
+                <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                <p>GitHub: <a href="https://github.com/just4koros">github.com/just4koros</a></p>
+            </div>
+        </section>
+
     </div>
-  </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="images/emmanuel-avatar.png" alt="Emmanuel Koros Avatar" class="avatar" />
-    <p>Hello! I'm Emmanuel Koros, a student with a passion for coding, data entry, and web development. I enjoy solving problems and building things that are useful and functional. I’m currently learning and building projects to sharpen my skills.</p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>What I Do</h2>
-    <div class="skills-container">
-      <div class="skill-card">
-        <img src="images/web-developer.png" alt="Web Development" />
-        <h3>Web Development</h3>
-        <p>I design and build clean, responsive websites using HTML, CSS, and JavaScript.</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/programmer.png" alt="Programming" />
-        <h3>Programming</h3>
-        <p>I write structured, clean code to build tools, applications, and automations.</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/data-entry.png" alt="Data Entry" />
-        <h3>Data Entry</h3>
-        <p>I offer fast and accurate data entry services using Google Sheets and Excel.</p>
-      </div>
-      <div class="skill-card">
-        <img src="images/images-typing.png" alt="Typing" />
-        <h3>Typing</h3>
-        <p>Fast and accurate typing for all kinds of data entry and transcription tasks.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:emmanuelkilel44@gmail.com">emmanuelkilel44@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/just4koros" target="_blank">github.com/just4koros</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Emmanuel Koros. All rights reserved.</p>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2025 Emmanuel Koros. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

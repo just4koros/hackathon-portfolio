@@ -13,15 +13,6 @@
       --accent: #1e3c72;
     }
 
-    /* DARK MODE VARIABLES */
-    .dark-mode:root {
-      --bg: #121212;
-      --text: #f0f0f0;
-      --card: #1e1e1e;
-      --nav: #1a1a1a;
-      --accent: #26435e;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -80,10 +71,6 @@
       width: 250px;
       text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .dark-mode .skill-card {
-      background-color: #2a2a2a;
     }
 
     .skill-card img {
@@ -146,21 +133,6 @@
     #darkToggle:checked + label::after {
       transform: translateX(25px);
     }
-
-    /* Dark mode via checkbox */
-    #darkToggle:checked ~ body {
-      background-color: #121212;
-    }
-
-    /* Root dark mode class when checked */
-    #darkToggle:checked ~ * {
-      --bg: #121212;
-      --text: #f0f0f0;
-      --card: #1e1e1e;
-      --nav: #1a1a1a;
-      --accent: #26435e;
-    }
-
   </style>
 </head>
 <body>
@@ -209,6 +181,11 @@
         <img src="images/data-entry.png" alt="Data Entry" />
         <h3>Data Entry</h3>
         <p>I offer fast and accurate data entry services using Google Sheets and Excel.</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/images-typing.png" alt="Typing" />
+        <h3>Typing</h3>
+        <p>Fast and accurate typing for all kinds of data entry and transcription tasks.</p>
       </div>
     </div>
   </section>

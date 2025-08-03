@@ -1,243 +1,348 @@
-/* ====================
-   General Styles
-   ==================== */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f7f9;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* ====================
-   Typography
-   ==================== */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin: 0;
-}
-
-h2 {
-    color: #007bff;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-/* ====================
-   Header & Navigation
-   ==================== */
-.header {
-    background-image: url('your-hero-image.jpg'); /* You will need to add a hero image and update this path */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px; /* Increased padding for the hero section */
-    text-align: center;
-    color: white; /* Changed font color for better contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #28a745;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #218838;
-}
-
-/* ====================
-   Section Styling
-   ==================== */
-section {
-    background-color: #fff;
-    padding: 60px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* ====================
-   About Me
-   ==================== */
-#about p {
-    text-align: center;
-    font-size: 1.1em;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* ====================
-   Skills / What I Do
-   ==================== */
-.skills-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    text-align: center;
-}
-
-.skill-item {
-    flex-basis: 30%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-}
-
-/* ====================
-   Projects
-   ==================== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.project-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.project-card h3 {
-    color: #333;
-    margin-top: 0;
-}
-
-.project-card .project-links a {
-    display: inline-block;
-    margin-right: 15px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.project-card .project-links a:hover {
-    text-decoration: underline;
-}
-
-/* ====================
-   Contact & Form
-   ==================== */
-#contact .contact-info, #contact form {
-    text-align: center;
-    font-size: 1.1em;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact .contact-info a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#contact .contact-info a:hover {
-    text-decoration: underline;
-}
-
-#contact form label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: bold;
-    color: #555;
-}
-
-#contact form input, #contact form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-    margin-bottom: 15px;
-    font-family: inherit;
-}
-
-#contact form input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact form input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* ====================\n   Footer\n   ==================== */
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: #888;
-    border-top: 1px solid #eee;
-    margin-top: 20px;
-}
-
-/* ====================\n   Responsive Design\n   ==================== */
-@media (max-width: 768px) {
-    .header {
-        padding: 60px 20px;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel Koros - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
-    section {
-        padding: 30px;
-    }
+    <style>
+        /* ====================
+           General Styles
+           ==================== */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-    .skills-list {
-        flex-direction: column;
-    }
-    
-    .skill-item {
-        flex-basis: 100%;
-    }
-}
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ====================
+           Typography
+           ==================== */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin: 0;
+        }
+
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* ====================
+           Header & Navigation
+           ==================== */
+        .header {
+            background-image: url('your-hero-image.jpg'); /* You will need to add a hero image and update this path */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px; /* Increased padding for the hero section */
+            text-align: center;
+            color: white; /* Changed font color for better contrast */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
+        /* ====================
+           Section Styling
+           ==================== */
+        section {
+            background-color: #fff;
+            padding: 60px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ====================
+           About Me
+           ==================== */
+        #about p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ====================
+           Skills / What I Do
+           ==================== */
+        .skills-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .skill-item {
+            flex-basis: 30%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ====================
+           Projects
+           ==================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .project-card .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .project-card .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ====================
+           Contact & Form
+           ==================== */
+        #contact .contact-info, #contact form {
+            text-align: center;
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        #contact form label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            font-weight: bold;
+            color: #555;
+        }
+
+        #contact form input, #contact form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            margin-bottom: 15px;
+            font-family: inherit;
+        }
+
+        #contact form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* ====================
+           Footer
+           ==================== */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+
+        /* ====================
+           Responsive Design
+           ==================== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 60px 20px;
+            }
+            
+            section {
+                padding: 30px;
+            }
+
+            .skills-list {
+                flex-direction: column;
+            }
+            
+            .skill-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Emmanuel Koros</h1>
+            <p>Web Developer, Programmer, and Data Entry Specialist</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                As a student with a passion for coding, data entry, and web development, I thrive on
+                solving problems and building useful things. I am constantly working on new projects
+                to improve my skills and stay up-to-date with the latest technologies. My goal is to
+                create clean, efficient, and user-friendly solutions.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>What I Do</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h3>Web Development</h3>
+                    <p>I design and build responsive, modern websites using HTML, CSS, and JavaScript, focusing on great user experience.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Programming</h3>
+                    <p>I write code for various tools, applications, and automations to streamline tasks and solve complex problems efficiently.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Data Entry</h3>
+                    <p>I provide fast and accurate data entry services using tools like Google Sheets and Microsoft Excel, ensuring data integrity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project.jpg" alt="A screenshot or image of your hackathon project" class="project-image">
+                    <h3>Hackathon Submission Project</h3>
+                    <p>A brief description of your hackathon project, what it does, and the technologies used (e.g., Python, Flask, etc.).</p>
+                    <div class="project-links">
+                        <a href="#">View Live</a>
+                        <a href="https://github.com/just4koros">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title Two</h3>
+                    <p>Description of another project you've worked on. Talk about the features, your role, and the outcomes.</p>
+                    <div class="project-links">
+                        <a href="#">View Live</a>
+                        <a href="https://github.com/just4koros">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title Three</h3>
+                    <p>Details about a third project. Mention any specific challenges you overcame or unique aspects of the build.</p>
+                    <div class="project-links">
+                        <a href="#">View Live</a>
+                        <a href="https://github.com/just4koros">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Feel free to get in touch with me to discuss a project or just say hello!</p>
+                <p>Email: <a href="mailto:emmanuelkilel44@gmail.com">emmanuelkilel44@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/just4koros">github.com/just4koros</a></p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Emmanuel Koros. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

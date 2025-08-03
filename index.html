@@ -2,60 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio - Dark Mode</title>
-  <style>
-    body {
-      background-color: #121212; /* Dark background */
-      color: #ffffff;             /* White text */
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    footer {
-      background-color: #1f1f1f;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-
-    a {
-      color: #66ccff;
-    }
-
-    img {
-      max-width: 100%;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emmanuel's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <header>
-    <h1>Welcome to My Portfolio</h1>
+  <header class="fade-in">
+    <h1 class="fade-text delay-1">Emmanuel Koros</h1>
+    <p class="fade-text delay-2">Web Developer • Student • Tech Enthusiast</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am a student learning web development, coding, and data entry.</p>
+  <section class="about fade-in">
+    <h2 class="fade-text delay-1">About Me</h2>
+    <p class="fade-text delay-2">I’m Emmanuel – a passionate student learning web development. I love turning ideas into websites and exploring tools that improve our digital lives.</p>
+    <img src="images/emmanuel-avatar.png" alt="Emmanuel Avatar" class="image-hover fade-text delay-3" />
+  </section>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript (beginne
+  <section class="skills fade-in">
+    <h2 class="fade-text delay-1">Skills</h2>
+    <ul class="fade-text delay-2">
+      <li>HTML5, CSS3</li>
+      <li>JavaScript (basic)</li>
+      <li>Responsive Web Design</li>
+      <li>Data Entry & Digital Literacy</li>
+    </ul>
+    <img src="images/data-entry.png" alt="Data Entry Skill" class="image-hover fade-text delay-3" />
+  </section>
+
+  <section class="project fade-in">
+    <h2 class="fade-text delay-1">Featured Project</h2>
+    <h3 class="fade-text delay-2">💰 Smart Expense Tracker</h3>
+    <p class="fade-text delay-2">A clean app that helps you track your expenses. Built with web tools for real-world use. Organized, fast, and easy to maintain.</p>
+    <img src="images/programmer.png" alt="Project Preview" class="image-hover fade-text delay-3" />
+  </section>
+
+  <section class="learning fade-in">
+    <h2 class="fade-text delay-1">Learning in Action</h2>
+    <p class="fade-text delay-2">I’m always building new things. From coding projects to experiments with design — learning never stops!</p>
+    <img src="images/web-developer.png" alt="Learning Section" class="image-hover fade-text delay-3" />
+  </section>
+
+  <section class="tools fade-in">
+    <h2 class="fade-text delay-1">Typing & AI Tools</h2>
+    <p class="fade-text delay-2">I love using typing platforms and AI tools to boost productivity and creativity.</p>
+    <img src="images/images-typing.png" alt="Typing and AI Tools" class="image-hover fade-text delay-3" />
+  </section>
+
+  <section class="portfolio fade-in">
+    <h2 class="fade-text delay-1">More Projects</h2>
+    <p class="fade-text delay-2">I enjoy trying out different ideas and building things for practice. Here's one of my latest visual concepts.</p>
+    <img src="images/project.jpg" alt="Extra Project Showcase" class="image-hover fade-text delay-3" />
+  </section>
+
+  <section class="contact fade-in">
+    <h2 class="fade-text delay-1">Contact Me</h2>
+    <p class="fade-text delay-2">Email: <a href="mailto:emmanuelkilel44@gmail.com">emmanuelkilel44@gmail.com</a></p>
+    <p class="fade-text delay-2">GitHub: <a href="https://github.com/just4koros" target="_blank">just4koros</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Emmanuel Koros. All rights reserved.</p>
+  </footer>
+</body>
+</html>

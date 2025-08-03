@@ -1,40 +1,104 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  padding: 20px;
 }
 
 header {
-  background: #222;
-  color: white;
-  padding: 2rem;
   text-align: center;
+  padding: 40px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #666;
 }
 
 section {
-  padding: 2rem;
-  margin: 1rem auto;
+  margin: 40px auto;
   max-width: 800px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+/* HOVER SHADOW EFFECT ON SECTION */
+section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+/* HOVER ZOOM EFFECT */
+.image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* FLOATING ANIMATION */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-image {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* LIST STYLING */
+ul li {
+  margin-bottom: 10px;
 }
 
 a {
-  color: #0077cc;
+  color: #007acc;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/* FADE IN TEXT EFFECT */
+.fade-text {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeTextUp 1s ease-in-out forwards;
+}
+
+.fade-text.delay-1 { animation-delay: 0.3s; }
+.fade-text.delay-2 { animation-delay: 0.5s; }
+.fade-text.delay-3 { animation-delay: 0.7s; }
+
+@keyframes fadeTextUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: white;
+  margin-top: 50px;
+  color: #888;
+  font-size: 0.9rem;
 }
+

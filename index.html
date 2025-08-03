@@ -3,128 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emmanuel Koros Portfolio</title>
-  <link href="style.css" rel="stylesheet" />
+  <title>Emmanuel Koros | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
       background-color: #f4f4f4;
+      color: #333;
     }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px 0;
+    header, #hero {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 40px 20px;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    #hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    #hero p {
+      font-size: 1.2em;
     }
 
     nav {
-      text-align: center;
       background-color: #444;
+      text-align: center;
       padding: 10px;
     }
 
     nav a {
-      color: #fff;
+      color: white;
       margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
     }
 
     section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-      background-color: #fff;
-      margin-bottom: 20px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
       border-radius: 10px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
     }
 
     .avatar {
-      width: 150px;
+      width: 160px;
       border-radius: 50%;
       display: block;
-      margin: 0 auto 15px;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
-    .skill {
-      text-align: center;
-      margin-bottom: 40px;
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
-    .skill img {
-      width: 200px;
+    .skill-card {
+      background-color: #f9f9f9;
       border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .skill-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
     footer {
       background-color: #333;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 15px 0;
+    }
+
+    @media (max-width: 768px) {
+      .skills-container {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Emmanuel Koros</h1>
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Hi, I'm Emmanuel Koros</h1>
     <p>Web Developer | Programmer | Data Entry Specialist</p>
-  </header>
+  </section>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
-    <a href="#skills">What I Do</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <img src="images/emmanuel-avatar.png" alt="Emmanuel Koros Avatar" class="avatar" />
-    <p>Hello! I'm Emmanuel Koros, a passionate student with skills in web development, programming, and data entry. I love creating clean, functional websites and solving problems with code.</p>
+    <p>Hello! I'm Emmanuel Koros, a student with a passion for coding, data entry, and web development. I enjoy solving problems and building things that are useful and functional. I’m currently learning and building projects to sharpen my skills.</p>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills">
     <h2>What I Do</h2>
-
-    <div class="skill">
-      <img src="images/web-developer.png" alt="Web Developer" />
-      <h3>Web Development</h3>
-      <p>I create modern and responsive websites using HTML, CSS, and JavaScript.</p>
-    </div>
-
-    <div class="skill">
-      <img src="images/programmer.png" alt="Programmer" />
-      <h3>Programming</h3>
-      <p>I write clean and efficient code to build web applications and automate tasks.</p>
-    </div>
-
-    <div class="skill">
-      <img src="images/data-entry.png" alt="Data Entry" />
-      <h3>Data Entry</h3>
-      <p>I enter, clean, and manage data accurately using tools like Excel and Google Sheets.</p>
+    <div class="skills-container">
+      <div class="skill-card">
+        <img src="images/web-developer.png" alt="Web Development" />
+        <h3>Web Development</h3>
+        <p>I design and build clean, responsive websites using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/programmer.png" alt="Programming" />
+        <h3>Programming</h3>
+        <p>I write structured, clean code to build tools, applications, and automations.</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/data-entry.png" alt="Data Entry" />
+        <h3>Data Entry</h3>
+        <p>I offer fast and accurate data entry services using Google Sheets and Excel.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>Contact Me</h2>
     <p>Email: <a href="mailto:emmanuelkilel44@gmail.com">emmanuelkilel44@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/just4koros" target="_blank">github.com/just4koros</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Emmanuel Koros. All rights reserved.</p>
   </footer>
